@@ -1,0 +1,30 @@
+package testCases;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+import pageObjects.homePage;
+import pageObjects.signPage;
+import pageObjects.signPageWithPassword;
+import testBase.BaseClass;
+
+public class TC_003_Email_Sign_In extends BaseClass{
+	
+	@Test
+	public void verify_Email_Login() throws Throwable
+	{
+		Thread.sleep(2000);
+		System.out.println("sess");
+		homePage hp=new homePage(driver);
+		hp.clickSignIn();
+		signPage sip=new signPage(driver);
+		sip.clickUseEmailAddress();
+		signPageWithPassword spwp=new signPageWithPassword(driver);
+		spwp.setEmail("testerrllp1@gmail.com");
+		spwp.setPassword("Tester123#");
+		spwp.clickSigninBtn();
+		
+		
+	}
+
+}

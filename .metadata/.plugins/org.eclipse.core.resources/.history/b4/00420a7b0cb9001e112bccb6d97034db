@@ -1,0 +1,31 @@
+package testCases;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
+import pageObjects.homePage;
+import pageObjects.signPage;
+import pageObjects.signPageWithPassword;
+import testBase.BaseClass;
+
+public class TC_003_Email_Sign_In extends BaseClass{
+	
+	@Test
+	public void verify_Email_Login() throws Throwable
+	{
+		homePage hp=new homePage(driver);
+		hp.clickSignIn();
+		signPage sip=new signPage(driver);
+		sip.clickUseEmailAddress();
+		signPageWithPassword spwp=new signPageWithPassword(driver);
+		spwp.setEmail("testerrllp1@gmail.com");
+		spwp.setPassword("Tester123#");
+		spwp.clickSigninBtn();
+		SoftAssert s=new SoftAssert();
+	    String msg = hp.getToastmessage();
+		System.out.println(msg);
+		
+	}
+
+}

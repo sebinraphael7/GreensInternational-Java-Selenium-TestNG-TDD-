@@ -1,0 +1,28 @@
+package practi;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import com.beust.jcommander.Parameter;
+
+import genericUtilities.IPathConstant;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class pract {
+public void m3(String URL) throws IOException
+{
+	System.out.println("seb");
+//	WebDriverManager.chromedriver().setup();
+//	WebDriver driver=new ChromeDriver();
+	FileInputStream fis=new FileInputStream(IPathConstant.PropertyFilePath);
+	Properties prop=new Properties();
+	prop.load(fis);
+	String Key=prop.getProperty(URL);
+	System.out.println(URL);
+}
+}

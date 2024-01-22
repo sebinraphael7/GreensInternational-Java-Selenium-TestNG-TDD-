@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-01-22T19:24:36 IST" name="Default suite" finished-at="2024-01-22T19:24:45 IST" duration-ms="9138">
+    <groups>
+    </groups>
+    <test started-at="2024-01-22T19:24:36 IST" name="Default test" finished-at="2024-01-22T19:24:45 IST" duration-ms="9138">
+      <class name="testCases.TC_005_FB_AutoSignIn_Valid_data">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.TC_005_FB_AutoSignIn_Valid_data@67d48005]" started-at="2024-01-22T19:24:36 IST" name="setup" finished-at="2024-01-22T19:24:41 IST" duration-ms="5494" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verify_FB_AutoSignIn()[pri:0, instance:testCases.TC_005_FB_AutoSignIn_Valid_data@67d48005]" started-at="2024-01-22T19:24:41 IST" name="verify_FB_AutoSignIn" finished-at="2024-01-22T19:24:45 IST" duration-ms="3607" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_FB_AutoSignIn -->
+      </class> <!-- testCases.TC_005_FB_AutoSignIn_Valid_data -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

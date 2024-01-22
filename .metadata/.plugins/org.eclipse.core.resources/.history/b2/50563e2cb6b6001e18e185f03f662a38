@@ -1,0 +1,20 @@
+package practi;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Practisemonk {
+@Test
+public void m4() {
+	WebDriverManager.chromedriver().setup();
+	WebDriver driver =new ChromeDriver();
+	driver.get("https://monkeytype.com/");
+	driver.manage().window().maximize();
+	driver.findElement(By.xpath("//button[@class='rejectAll']")).click();
+	driver.findElement(By.xpath("//div[@mode='custom']")).click();
+}
+}

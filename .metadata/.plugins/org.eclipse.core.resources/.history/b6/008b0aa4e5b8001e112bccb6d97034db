@@ -1,0 +1,35 @@
+package pageObjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class signPageWithPassword extends basePage{
+	WebDriver driver;
+	public signPageWithPassword(WebDriver driver)
+	{
+		super(driver);
+	}
+	
+	@FindBy (xpath = "//input[@placeholder='Email Address']")
+	WebElement emailTxtBox;
+	@FindBy (xpath = "//div[@class=\"inline-flex w-full items-center h-full box-border\"]")
+	WebElement pswdTxtBox;
+	@FindBy (xpath = "//div[normalize-space()='Sign in']")
+	WebElement lnkSignin;
+	
+	public void setEmail(String email)
+	{
+		emailTxtBox.sendKeys(email);
+	}
+	public void setPassword(String pswd)
+	{
+		pswdTxtBox.sendKeys(pswd);
+	}
+	public void clickLogin()
+	{
+		lnkLogin.click();
+	}
+	
+
+}

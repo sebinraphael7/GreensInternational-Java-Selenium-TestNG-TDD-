@@ -1,0 +1,23 @@
+package testCases;
+
+import org.testng.annotations.Test;
+
+import pageObjects.homePage;
+import pageObjects.signPage;
+import pageObjects.signPageWithPassword;
+import testBase.BaseClass;
+
+public class TC_004_Email_Sign_In_Invaild extends BaseClass {
+	@Test
+	public void verify_Email_Login_Invalid()
+	{
+		homePage hp=new homePage(driver);
+		hp.clickSignIn();
+		signPage sip=new signPage(driver);
+		sip.clickUseEmailAddress();
+		signPageWithPassword spwp=new signPageWithPassword(driver);
+		spwp.setEmail("testerrllp1@gmail.com");
+		spwp.setPassword("Tester123#");
+	}
+
+}

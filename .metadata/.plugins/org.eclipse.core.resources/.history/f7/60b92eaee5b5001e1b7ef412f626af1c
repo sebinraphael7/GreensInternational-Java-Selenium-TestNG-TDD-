@@ -1,0 +1,15 @@
+package genericUtilities;
+
+import org.apache.commons.lang3.RandomStringUtils;
+
+public class javaUtility {
+	public static void main(String[] args) 
+		
+	
+//	public String randomStrign()
+	{
+		String generatedString=RandomStringUtils.randomAlphabetic(5);
+		System.out.println(generatedString);
+	}
+
+}

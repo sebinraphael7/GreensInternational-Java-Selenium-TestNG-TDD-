@@ -1,0 +1,33 @@
+package practi;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class enau {
+	@Test
+	public void email() throws Throwable
+	{
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://react.greens-intl.ae/");
+		driver.manage().window().maximize();
+		driver.findElement(By.xpath("//p[@class='item-label']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//p[@content='Use Email Address']")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//input[@placeholder='Email Address']")).sendKeys("test");
+		driver.findElement(By.xpath("//input[@id='react-aria1295068417-:r0:']")).sendKeys("sse");
+		
+		
+		
+//		driver.findElement(By.xpath("//p[normalize-space()='Keep me signed in']")).click();
+//		driver.findElement(By.xpath("//div[normalize-space()='Sign in']")).click();
+	
+		
+	}
+
+}

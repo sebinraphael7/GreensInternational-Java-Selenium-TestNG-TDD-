@@ -1,0 +1,6 @@
+package genericUtilities;
+
+public interface IPathConstant 
+{
+String PropertyFilePath="./testData/data.properties";
+}

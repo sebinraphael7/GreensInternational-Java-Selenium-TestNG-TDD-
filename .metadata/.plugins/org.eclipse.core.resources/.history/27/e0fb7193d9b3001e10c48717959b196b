@@ -1,0 +1,13 @@
+package pageObjects;
+
+import org.openqa.selenium.WebDriver;
+
+public class signPageWithPassword extends basePage{
+	WebDriver driver;
+	public signPageWithPassword(WebDriver driver)
+	{
+		super(driver);
+	}
+	
+
+}

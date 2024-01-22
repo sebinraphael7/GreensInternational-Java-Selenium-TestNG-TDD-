@@ -1,0 +1,24 @@
+package pageObjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class googleSignInPage extends basePage {
+	public googleSignInPage(WebDriver driver)
+	{
+		super(driver);
+	}
+	@FindBy(xpath="//input[@id='identifierId']")
+	WebElement emailtxtbx;
+	@FindBy(xpath = "//span[text()='Next']")
+	WebElement nxtbtn;
+	
+	public void setEmail(String email) {
+		emailtxtbx.sendKeys(email);
+	}
+	public void clickNext()
+	{
+		nxtbtn.click();
+	}
+}

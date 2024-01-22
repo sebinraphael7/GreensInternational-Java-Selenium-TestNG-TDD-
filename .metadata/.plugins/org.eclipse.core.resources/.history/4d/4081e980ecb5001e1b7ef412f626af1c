@@ -1,0 +1,26 @@
+package testCases;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+import pageObjects.facebookSignInPage;
+import pageObjects.homePage;
+import testBase.BaseClass;
+
+public class TC_001_FacebookLogin extends BaseClass{
+	
+	public WebDriver driver;
+	
+
+	
+	@Test
+	public void verify_facebook_login()
+	{
+		homePage hp=new homePage(driver);
+		hp.clickSignIn();
+		facebookSignInPage fpg=new facebookSignInPage(driver);
+		fpg.clickLogIn();
+		
+		
+	}
+}

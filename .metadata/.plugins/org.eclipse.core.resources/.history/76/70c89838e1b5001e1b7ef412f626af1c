@@ -1,0 +1,20 @@
+package genericUtilities;
+
+import java.io.FileInputStream;
+
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+
+public class excelUtility {
+
+	
+	public String getSingleDataFromExcel(String sheetName,int rowNum, int cellNum) throws Throwable
+	{
+		FileInputStream fis=new FileInputStream("./testData/user details.xlsx");
+		Workbook wb=WorkbookFactory.create(fis);
+		String data=wb.getSheet("Sheet1").getRow(3).getCell(1).getStringCellValue();
+		System.out.println(data);
+		return data;
+				
+	}
+}

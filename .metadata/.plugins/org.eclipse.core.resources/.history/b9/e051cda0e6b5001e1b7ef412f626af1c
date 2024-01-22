@@ -1,0 +1,26 @@
+package genericUtilities;
+
+import org.apache.commons.lang3.RandomStringUtils;
+
+public class javaUtility {
+	public static void main(String[] args) 
+		
+	
+//	public String randomStrign()
+	{
+		String generatedString=RandomStringUtils.randomAlphabetic(5);
+		System.out.println(generatedString);
+//	}
+//	public String randomNumber()
+//	{
+		String generatedNumber=RandomStringUtils.randomNumeric(10);
+		System.out.println(generatedNumber);
+//	}
+//	public String random AlphaNumeric()
+//	{
+		String str=RandomStringUtils.randomAlphabetic(3);
+		String num=RandomStringUtils.randomNumeric(3);
+		System.out.println(str+"@"+num);
+	}
+
+}
