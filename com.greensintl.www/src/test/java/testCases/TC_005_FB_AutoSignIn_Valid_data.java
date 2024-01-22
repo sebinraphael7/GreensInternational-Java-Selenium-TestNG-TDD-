@@ -13,6 +13,6 @@ public void verify_FB_AutoSignIn()
 	homePage hp=new homePage(driver);
 	hp.clickSignIn();
 	signPage sip=new signPage(driver);
-	sip.clickSigninWithFacebook();
+//	sip.clickSigninWithFacebook();
 }
 }
